@@ -6,6 +6,7 @@
 var gulp = require('gulp'),
   path = require('path'),
   browserSync = require('browser-sync').create(),
+  sass = require('gulp-sass'),
   argv = require('minimist')(process.argv.slice(2));
 
 /******************************************************
@@ -41,6 +42,17 @@ gulp.task('pl-copy:css', function(){
     .pipe(gulp.dest(path.resolve(paths().public.css)))
     .pipe(browserSync.stream());
 });
+
+// SASS Compilation
+gulp.task('pl-sass', function(){
+  return gulp.src(path.resolve(paths().source.css, '**/*.scss'))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest(path.resolve(paths().source.css)));
+});
+
+gulp.task('pl-sass:watch', function(){
+  gulp.watch('./css/**/*.scss', ['sass']);
+})
 
 // Styleguide Copy everything but css
 gulp.task('pl-copy:styleguide', function(){
@@ -85,7 +97,7 @@ gulp.task('pl-assets', gulp.series(
     'pl-copy:img',
     'pl-copy:favicon',
     'pl-copy:font',
-    'pl-copy:css',
+    gulp.series('pl-sass', 'pl-copy:css', function(done){done();}),
     'pl-copy:styleguide',
     'pl-copy:styleguide-css'
   ),
@@ -141,6 +153,7 @@ function reload() {
 }
 
 function watch() {
+  gulp.watch(path.resolve(paths().source.css, '**/*.scss')).on('change', gulp.series('pl-sass'));
   gulp.watch(path.resolve(paths().source.css, '**/*.css')).on('change', gulp.series('pl-copy:css', reload));
   gulp.watch(path.resolve(paths().source.styleguide, '**/*.*')).on('change', gulp.series('pl-copy:styleguide', 'pl-copy:styleguide-css', reload));
 

@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "timestamp": 1514167989648,
+  "graph": {
+    "options": {
+      "directed": true,
+      "multigraph": false,
+      "compound": false
+    },
+    "nodes": [
+      {
+        "v": "00-atoms/01-angular/tooltip.mustache",
+        "value": {
+          "compileState": "clean"
+        }
+      },
+      {
+        "v": "/Users/Miguel/Projects/angular-design-system/patternlab-node-angular-example/source/_meta/_00-head.mustache",
+        "value": {
+          "compileState": null
+        }
+      },
+      {
+        "v": "/Users/Miguel/Projects/angular-design-system/patternlab-node-angular-example/source/_meta/_01-foot.mustache",
+        "value": {
+          "compileState": null
+        }
+      }
+    ],
+    "edges": []
+  }
+}
