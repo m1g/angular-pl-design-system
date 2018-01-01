@@ -83,133 +83,13 @@
     {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"<p>This color palette contains Script specific colors to be used throughout the interface.</p>\n","patternBreadcrumb":{"patternType":"atoms","patternSubtype":"global"},"patternExtension":"mustache","patternName":"Brand Colors","patternPartial":"atoms-brand-colors","patternState":"","patternEngineName":"mustache","extraOutput":{}}
   </script>
 </div><!--end .sg-pattern-->
-<div id="viewall-atoms-angular" class="sg-pattern-category">
-  <h2 class="sg-pattern-category-title"><a href="../../patterns/00-atoms-01-angular&#x2F;index.html" class="patternLink" data-patternpartial="viewall-atoms-angular">angular</a></h2>
-
-  <div class="sg-pattern-category-body">
-    
-  </div><!--end sg-pattern-category-body-->
-  
-</div><!--end sg-pattern-category-->
-<div id="atoms-tooltip" class="sg-pattern">
-  <div class="sg-pattern-head">
-    <h3 class="sg-pattern-title">
-      <a href="../../patterns/00-atoms-01-angular-tooltip&#x2F;00-atoms-01-angular-tooltip.rendered.html" class="patternLink" data-patternpartial="atoms-tooltip" title="Link to Pattern">
-          Tooltip
-      </a>
-    </h3>
-    <div class="sg-pattern-breadcrumb"></div>
-    <a href="#" data-patternpartial="atoms-tooltip" title="View Pattern Info" id="sg-pattern-extra-toggle-atoms-tooltip" class="sg-pattern-extra-toggle"><span>&#9660;</span></a>
-  </div>
-  <div class="sg-pattern-extra" id="sg-pattern-extra-atoms-tooltip">
-    
-  </div>
-  <div class="sg-pattern-example">
-    <div ng-controller="AppCtrl" ng-cloak="" class="tooltipdemoBasicUsage" ng-app="MyApp">
-
-  <md-toolbar class="md-accent">
-    <h2 class="md-toolbar-tools">
-      <span flex="">Awesome Md App</span>
-      <md-button class="md-icon-button" aria-label="refresh">
-        <md-tooltip md-direction="left">
-          Refresh
-        </md-tooltip>
-        <md-icon md-svg-src="img/icons/ic_refresh_24px.svg" style="width: 24px; height: 24px;">
-        </md-icon>
-      </md-button>
-    </h2>
-  </md-toolbar>
-  <md-content layout-padding="" style="margin-left: 20px; margin-right: 20px">
-    <div>
-
-      <p>
-        The tooltip is visible when the button is hovered, focused, or touched.
-      </p>
-
-      <div layout="row" layout-align="space-between">
-        <md-button class="md-fab" aria-label="Insert Drive">
-          <md-icon md-svg-src="img/icons/ic_insert_drive_file_24px.svg"></md-icon>
-          <md-tooltip md-visible="demo.showTooltip" md-direction="">
-            Insert Drive
-          </md-tooltip>
-        </md-button>
-        <md-button class="md-fab" aria-label="Photos">
-          <md-tooltip>
-            Photos
-          </md-tooltip>
-          <md-icon md-svg-src="img/icons/ic_photo_24px.svg" style="width: 24px; height: 24px;"></md-icon>
-        </md-button>
-      </div>
-
-
-      <div style="margin-top: 40px;margin-bottom: -5px">
-        <p><code>md-direction</code> attribute can used to dynamically change the direction of the tooltip.<br>
-        Note: the direction default value is 'bottom'. </p>
-        <div style="padding-left: 30px">
-        <md-radio-group ng-model="demo.tipDirection">
-           <md-radio-button value="left"> Left </md-radio-button>
-           <md-radio-button value="top">Top</md-radio-button>
-           <md-radio-button value="bottom">Bottom</md-radio-button>
-           <md-radio-button value="right">Right</md-radio-button>
-         </md-radio-group>
-        </div>
-      </div>
-
-
-      <div style="margin-top: 20px;">
-        <p>
-          Additionally, the Tooltip's <code>md-visible</code> attribute can use data-binding to
-          programmatically show/hide itself. Toggle the checkbox below...
-        </p>
-        <div style="padding-left: 37px">
-          <md-checkbox ng-model="demo.showTooltip" style="padding-left:30px;">
-            Insert Drive
-          </md-checkbox>
-        </div>
-      </div>
-
-      <div style="margin-top: 20px;margin-bottom: -5px">
-        <p>
-          Additionally, the Tooltip's <code>md-delay</code> attribute can use to delay the
-          show animation. The default values is 0 mSecs...
-        </p>
-        <div style="padding-left: 37px">
-          <md-input-container>
-            <label>Tooltip Delay (for Photos)</label>
-            <input ng-model="demo.delayTooltip">
-          </md-input-container>
-
-          <md-button class="md-fab" aria-label="Photos with Tooltip Delay" style="margin-top: -24px;">
-            <md-icon md-svg-src="img/icons/ic_photo_24px.svg" style="width: 24px; height: 24px; "></md-icon>
-            <md-tooltip md-delay="demo.delayTooltip">
-              Photos with Tooltip Delay  msecs
-            </md-tooltip>
-          </md-button>
-
-        </div>
-      </div>
-
-    </div>
-  </md-content>
-</div>
-
-<!--
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that can be foundin the LICENSE file at http://material.angularjs.org/HEAD/license.
--->
-
-  </div>
-  <script type="text/json" id="sg-pattern-data-atoms-tooltip" class="sg-pattern-data">
-    {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"<h1>Angular Tooltip</h1>\n<p>This code is a near-exact copy of the code demoed at <a href=\"https://material.angularjs.org/latest/demo/tooltip\">https://material.angularjs.org/latest/demo/tooltip</a>.</p>\n","patternBreadcrumb":{"patternType":"atoms","patternSubtype":"angular"},"patternExtension":"mustache","patternName":"Tooltip","patternPartial":"atoms-tooltip","patternState":"","patternEngineName":"mustache","extraOutput":{}}
-  </script>
-</div><!--end .sg-pattern-->
   </div> <!--end #sg-patterns-->
 
 </div><!--end .sg-main-->
 
 <!--DO NOT REMOVE-->
 <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
-  {"patternPartial":"viewall-atoms-all"}
+  {"patternPartial":"viewall-atoms-global"}
 </script>
 
 <script>

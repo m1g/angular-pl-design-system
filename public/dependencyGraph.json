@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": 1514306599835,
+  "timestamp": 1514829350334,
   "graph": {
     "options": {
       "directed": true,
@@ -8,6 +8,12 @@
       "compound": false
     },
     "nodes": [
+      {
+        "v": "00-atoms/00-global/00-brand-colors.mustache",
+        "value": {
+          "compileState": "clean"
+        }
+      },
       {
         "v": "00-atoms/01-angular/tooltip.mustache",
         "value": {
