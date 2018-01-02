@@ -3,56 +3,97 @@
 \*------------------------------------*/
 
 /**
- * Button
+ * Buttons
  */
-.c-btn {
+.s-btn { // Default style for buttons
 	display: inline-block;
-	background: $color-brand-green-dark;
-	color: $color-white;
 	line-height: 1;
 	font-weight: bold;
 	padding: 1rem 2rem;
-	border: 0;
 	border-radius: $border-radius;
 	text-align: center;
-	transition: background 0.2s ease;
-
-	&:hover, &:focus {
-		background: $color-brand-green;
-		color: $color-white;
-	}
+	  
+  &.primary {
+    background: $color-script-blue;
+    border: 1px solid transparent;
+    color: $color-white;
+    transition: background 0.2s ease;
+    
+    &:focus, &:hover {
+      background: $color-script-blue-dark;
+    }
+  }
+  
+  &.outline {
+    background: $color-white;
+    border: 1px solid $color-script-blue;
+    color: $color-script-blue;
+    transition: all 0.2s ease;
+    
+    &:focus, &:hover {
+      background: $color-script-blue-dark;
+      color: $color-white;
+      border-color: $color-white;
+    }
+  }
+  
+  &.text {
+    background: transparent;
+    border: 1px solid transparent;
+    color: $color-script-blue;
+    transition: color 0.2s ease;
+    
+    &:focus, &:hover {
+      color: $color-script-blue-dark;
+    }
+  }
+    
 
 	/**
-	 * Disabled button
+	 * Disabled buttons
 	 */
-	&.disabled {
-		background: $color-gray-15;
-		color: $color-gray-50;
+	&.primary-disabled {
+		background: $color-grey;
+		color: $color-white;
 	}
+  
+	&.outline-disabled {
+		background: $color-white;
+    border: 1px solid $color-grey;
+		color: $color-grey;
+	}
+  
+  &.text-disabled {
+    background: transparent;
+    border-color: transparent;
+    color: $color-grey;
+  }
 }
+
+
 
 /**
  * Small button
  */
-.c-btn-small {
+.s-btn-small {
 	padding: $pad-half;
 }
 
 /**
  * Large button
  */
-.c-btn-large {
+.s-btn-large {
 	padding: $pad-half;
 	text-transform: uppercase;
-	background: $color-gray-50;
+	background: $color-grey;
 	font-size: 1.4rem;
 	font-weight: normal;
 }
 
 /**
- * Text button
+ * Text button with arrow
  */
-.c-text-btn {
+.s-text-btn {
 	position: relative;
 	background: none;
     border: none;
@@ -72,14 +113,14 @@
 	}
 	
 	&:hover, &:focus {
-	    color: $color-gray-73;
+	    color: $color-grey-dark;
 	    
 	    &:after {
 		    right: -28px;
 	    }
     }
     
-    .c-block-media--small & {
+    .s-block-media--small & {
 	    font-size: 1rem;
 	}
 }
@@ -88,6 +129,6 @@
  * Button on overlay
  */
  
- .c-btn--overlay {
-	 background: $color-gray-35;
+ .s-btn--overlay {
+	 background: $color-grey;
  }

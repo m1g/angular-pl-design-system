@@ -78,8 +78,8 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
     $ABSTRACTS
 \*------------------------------------*/
 @import "scss/abstracts/mixins";
-@import "scss/abstracts/scaffolding";
 @import "scss/abstracts/variables";
+@import "scss/abstracts/scaffolding";
 
 
 
@@ -91,13 +91,13 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "scss/base/forms";
 @import "scss/base/global-classes";
 @import "scss/base/headings";
-@import "scss/base/links";
-@import "scss/base/lists";
-@import "scss/base/main";
-@import "scss/base/media";
-@import "scss/base/reset";
-@import "scss/base/tables";
-@import "scss/base/text";
+// @import "scss/base/links";
+// @import "scss/base/lists";
+// @import "scss/base/main";
+// @import "scss/base/media";
+// @import "scss/base/reset";
+// @import "scss/base/tables";
+// @import "scss/base/text";
 
 
 
@@ -107,7 +107,7 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
     $COMPONENTS
 \*------------------------------------*/
 // @import "scss/components/blocks";
-// @import "scss/components/buttons";
+@import "scss/components/buttons";
 // @import "scss/components/carousels";
 // @import "scss/components/footer";
 // @import "scss/components/footer-nav";

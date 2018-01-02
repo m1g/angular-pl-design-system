@@ -70,7 +70,110 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
  * UTILITIES..............Styles that require a utility class
  *
  */
+/*------------------------------------*    $ABSTRACTS
+\*------------------------------------*/
+/*------------------------------------*    #MIXINS
+\*------------------------------------*/
+/** CSS Transition
+ *	Usage: @include transition(width,0.3s,ease-out);
+ */
+/** Rem Unit font sizes with relative fallback http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback  
+ *	Usage: @include font-size(1, large);
+ */
+/*------------------------------------*    #VARIABLES
+\*------------------------------------*/
+/*------------------------------------*    #COLORS
+\*------------------------------------*/
+/*
+ * 1) Color variables involve a two-tier system to keep colors in sync. The
+ *    first tier defines the brand and neutral colors, and the second tier
+ *    defines the application of those colors.
+ */
+/*
+ * Brand Colors
+ * 1) Brand color variables use English names to define colors to make palettes easier to
+ *    identify. Names are generated using this tool: http://chir.ag/projects/name-that-color/
+ * 2) Brand color variables should typically not be used directly in Sass partials. Instead, use
+ *    second-tier application colors.
+ *
+ */
+/*
+ * Greyscale Colors
+ * 1) Greyscale color variables define variables for better grayscale maintainability
+ */
+/**
+ * Utility Colors
+ * 1) Utility colors are colors used to provide feedback, such as alert messages,
+ * form validation, etc.
+ */
+/*------------------------------------*    #TEXT COLORS
+\*------------------------------------*/
+/*------------------------------------*    #HEADING COLORS
+\*------------------------------------*/
+/*------------------------------------*    #LINK COLORS
+\*------------------------------------*/
+/*------------------------------------*    #BORDER COLORS
+\*------------------------------------*/
+/*------------------------------------*    #TYPOGRAPHY
+\*------------------------------------*/
+/*------------------------------------*    #LAYOUT
+\*------------------------------------*/
+/**
+ * Spacing Defaults
+ */
+/*------------------------------------*    #BORDERS
+\*------------------------------------*/
+/**
+ * Border Width
+ */
+/**
+ * Border Radius
+ */
+/*------------------------------------*    #ANIMATION
+\*------------------------------------*/
+/**
+ * Animation Duration
+ */
+/**
+ * Animation Easing
+ */
+/*------------------------------------*    #BREAKPOINTS
+\*------------------------------------*/
+/**
+ * Breakpoints
+ */
+/*------------------------------------*    #SCAFFOLDING
+\*------------------------------------*/
+/*------------------------------------*    #OVERRIDES
+\*------------------------------------*/
+/*
+  * Title Overrides
+  * Adds correct sizing and styles to category and patter titles
+*/
+div h3.sg-pattern-title {
+  font-size: 1.5rem !important; }
 
+div h2.sg-pattern-category-title {
+  font-size: 2.25rem !important; }
+  div h2.sg-pattern-category-title a.patternLink, div h2.sg-pattern-category-title a.patternLink:visited {
+    color: grey !important;
+    font-weight: 700; }
+  div h2.sg-pattern-category-title a.patternLink:focus, div h2.sg-pattern-category-title a.patternLink:hover {
+    color: #333333 !important; }
+
+/*
+  * Grouping Elements
+  * Added to group several elements together
+*/
+.s-groups {
+  display: flex;
+  margin: 0 .25em;
+  padding: .25em;
+  border: 1px solid #ddd;
+  border-radius: 8px; }
+
+/*------------------------------------*    #SWATCHES
+\*------------------------------------*/
 #sg-patterns {
   -webkit-box-sizing: border-box !important;
   box-sizing: border-box !important;
@@ -106,33 +209,49 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 .s-label {
   font-size: 90%;
   line-height: 1; }
-  
+
 .demo-animate {
   background: #ddd;
   padding: 1em;
   margin-bottom: 1em;
   text-align: center;
   border-radius: 8px;
-  cursor: pointer;}
-  
-/*------------------------------------*
-    #STYLEGUIDE OVERRIDES
+  cursor: pointer; }
+
+/*------------------------------------*    #BUTTONS
 \*------------------------------------*/
+.s-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important; }
+  .s-buttons span {
+    margin: 0.75em 0; }
+  .s-buttons li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.3em;
+    margin: 0 0.5em 0.5em 0;
+    min-width: 5em;
+    max-width: 14em; }
 
-div h3.sg-pattern-title {
-  font-size: 1.5rem !important;}
-  
-h2 a.patternLink {
-  font-size: 2.25rem !important;
-  font-weight: 700;
-}
-
+/*------------------------------------*    $BASE
+\*------------------------------------*/
+/*------------------------------------*    #BODY
+\*------------------------------------*/
 /**
  * Body base styles
  */
 body {
-  background: #fff;
-  color: #808080;
+  background: #ffffff;
+  color: #767676;
   font: 100%/1.5 "Nunito", "Helvetica", "Arial", sans-serif;
   -webkit-text-size-adjust: 100%;
   min-height: 100vh;
@@ -185,7 +304,7 @@ button, input, select, textarea {
  */
 input, textarea {
   width: 100%;
-  border: 1px solid #a5a5a5;
+  border: 1px solid #dbdbdb;
   border-radius: 6px;
   padding: 1rem; }
 
@@ -201,8 +320,8 @@ input[type=text], input[type=search], input[type=url], input[type=number], texta
  */
 button, input[type="submit"] {
   padding: 0.5em;
-  background: #444444;
-  border: 1px solid #808080;
+  background: #767676;
+  border: 1px solid #c5c5c5;
   cursor: pointer; }
 
 /**
@@ -302,32 +421,29 @@ input[type="search"]::-webkit-search-decoration {
  * Show valid text color
  */
 .valid {
-  color: #03804d; }
+  color: #1fe31f; }
 
 /**
  * Show error text color
  */
 .error {
-  color: #b12a0b; }
+  color: #e31f1f; }
 
 /**
  * Show warning text color
  */
 .warning {
-  color: #a59b15; }
+  color: #fada4a; }
 
 /**
  * Show informational text color
  */
 .information {
-  color: #0192d0; }
+  color: #fada4a; }
 
 /**
  * Display secondary font family
  */
-.font-secondary {
-  font-family: Georgia, Times, "Times New Roman", serif; }
-
 /*------------------------------------*    #HEADINGS
 \*------------------------------------*/
 /**
@@ -365,170 +481,102 @@ h3 {
   font-family: Georgia, Times, "Times New Roman", serif;
   font-weight: normal; }
 
-/*------------------------------------*    #LINKS
-\*------------------------------------*/
-/**
- * Links
- */
-a {
-  color: #808080;
-  text-decoration: none;
-  outline: 0;
-  transition: all 0.2s ease; }
-  a:hover, a:focus {
-    color: #444444; }
-
-/*------------------------------------*    #LISTS
-\*------------------------------------*/
-/**
- * Ordered/Unordered list base styles
- */
-ol, ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
-/**
- * Definition list base styles
- */
-dl {
-  overflow: hidden;
-  margin: 0 0 1em; }
-
-/**
- * Terms/Names base styles
- */
-dt {
-  font-weight: bold; }
-
-/**
- * Definition list description base styles
- */
-dd {
-  margin-left: 0; }
-
-/*------------------------------------*    #MAIN
-\*------------------------------------*/
-/**
- * Main content area
- */
-[role=main] {
-  flex: 1; }
-
-/*------------------------------------*    #MEDIA ELEMENTS
-\*------------------------------------*/
-/**
- * Make media elements responsive
- */
-img, video, object {
-  max-width: 100%;
-  height: auto; }
-
-/**
- * Iframe base styles
- */
-iframe {
-  margin-bottom: 1em; }
-
-/**
- * Figure base styles
- */
-figure {
-  margin-bottom: 1em;
-  /**
-	 * Figure image base styles
-	 */ }
-  figure img {
-    margin-bottom: 0.5em; }
-
-/**
- * Figure caption base styles
- */
-figcaption {
-  font-style: italic; }
-
-/*------------------------------------*    #RESET
-\*------------------------------------*/
-/**
- * Use border box on all elements
- */
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-/**
- * Zero out margin and padding on most elements as base style
- */
-html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
-  margin: 0;
-  padding: 0; }
-
-/**
- * Display block as base for these elements
- */
-header, footer, nav, section, article, hgroup, figure {
-  display: block; }
-
-/*------------------------------------*    #TABLE
-\*------------------------------------*/
-/**
- * Table base styles
- */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  border: 1px solid #808080;
-  width: 100%; }
-
-/**
- * Table header base styles
- */
-th {
-  text-align: left;
-  border: 1px solid #808080;
-  padding: 0.2em; }
-
-/**
- * Table cell base styles
- */
-td {
-  border: 1px solid #808080;
-  padding: 0.2em; }
-
-/*------------------------------------*    #TEXT
-\*------------------------------------*/
-/**
- * Paragraph base styles
- */
-p {
-  margin-bottom: 1em; }
-
-/**
- * Blockquote base styles
- */
-blockquote {
-  font-style: italic;
-  border-left: 1px solid #808080;
-  color: #808080;
-  padding-left: 1em;
-  margin-bottom: 1em; }
-
-/**
- * Horizontal rule base styles
- */
-hr {
-  border: 0;
-  height: 2px;
-  background: #d9d9d9;
-  margin: 2em 0; }
-  
-/**
- * Abbreviation base styles
- */
-abbr {
-  border-bottom: 1px dotted #808080;
-  cursor: help; }
-
 /*------------------------------------*    $COMPONENTS
 \*------------------------------------*/
+/*------------------------------------*    #BUTTONS
+\*------------------------------------*/
+/**
+ * Buttons
+ */
+.s-btn {
+  display: inline-block;
+  line-height: 1;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  text-align: center;
+  /**
+	 * Disabled buttons
+	 */ }
+  .s-btn.primary {
+    background: #0097ef;
+    border: 1px solid transparent;
+    color: #ffffff;
+    transition: background 0.2s ease; }
+    .s-btn.primary:focus, .s-btn.primary:hover {
+      background: #007ed6; }
+  .s-btn.outline {
+    background: #ffffff;
+    border: 1px solid #0097ef;
+    color: #0097ef;
+    transition: all 0.2s ease; }
+    .s-btn.outline:focus, .s-btn.outline:hover {
+      background: #007ed6;
+      color: #ffffff;
+      border-color: #ffffff; }
+  .s-btn.text {
+    background: transparent;
+    border: 1px solid transparent;
+    color: #0097ef;
+    transition: color 0.2s ease; }
+    .s-btn.text:focus, .s-btn.text:hover {
+      color: #007ed6; }
+  .s-btn.primary-disabled {
+    background: #c5c5c5;
+    color: #ffffff; }
+  .s-btn.outline-disabled {
+    background: #ffffff;
+    border: 1px solid #c5c5c5;
+    color: #c5c5c5; }
+  .s-btn.text-disabled {
+    background: transparent;
+    border-color: transparent;
+    color: #c5c5c5; }
+
+/**
+ * Small button
+ */
+.s-btn-small {
+  padding: 0.5em; }
+
+/**
+ * Large button
+ */
+.s-btn-large {
+  padding: 0.5em;
+  text-transform: uppercase;
+  background: #c5c5c5;
+  font-size: 1.4rem;
+  font-weight: normal; }
+
+/**
+ * Text button with arrow
+ */
+.s-text-btn {
+  position: relative;
+  background: none;
+  border: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.2rem; }
+  .s-text-btn:after {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    background: url("../../../images/icon-arrowhead.svg") no-repeat;
+    top: 7px;
+    right: -26px;
+    transition: all 0.2s ease; }
+  .s-text-btn:hover, .s-text-btn:focus {
+    color: #767676; }
+    .s-text-btn:hover:after, .s-text-btn:focus:after {
+      right: -28px; }
+  .s-block-media--small .s-text-btn {
+    font-size: 1rem; }
+
+/**
+ * Button on overlay
+ */
+.s-btn--overlay {
+  background: #c5c5c5; }

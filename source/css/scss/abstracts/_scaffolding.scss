@@ -2,15 +2,48 @@
     #SCAFFOLDING
 \*------------------------------------*/
 
+/*------------------------------------*\
+    #OVERRIDES
+\*------------------------------------*/
 
+
+/*
+  * Title Overrides
+  * Adds correct sizing and styles to category and patter titles
+*/
+div h3.sg-pattern-title {
+  font-size: 1.5rem !important;
+}
+
+div h2.sg-pattern-category-title {
+  font-size: 2.25rem !important;
+  
+  a.patternLink, a.patternLink:visited {
+    color: grey !important;
+    font-weight: 700;
+  }
+  
+  a.patternLink:focus, a.patternLink:hover {
+    color: $color-black !important;
+  }
+}
+
+
+/*
+  * Grouping Elements
+  * Added to group several elements together
+*/
+.s-groups {
+  display: flex;
+  margin: 0 .25em;
+  padding: .25em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
 
 /*------------------------------------*\
     #SWATCHES
 \*------------------------------------*/
-
-div h3.sg-pattern-title {
-  font-size: 1.5rem !important;
-}
 
 #sg-patterns {
   -webkit-box-sizing: border-box !important;
@@ -62,3 +95,36 @@ div h3.sg-pattern-title {
   border-radius: 8px;
   cursor: pointer;
 }
+
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+
+.s-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  
+  
+  span {
+    margin: 0.75em 0;
+  }
+  
+  li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.3em;
+    margin: 0 0.5em 0.5em 0;
+    min-width: 5em;
+    max-width: 14em;
+  }
+}
+
