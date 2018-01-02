@@ -70,20 +70,7 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
  * UTILITIES..............Styles that require a utility class
  *
  */
-/*------------------------------------*    $ABSTRACTS
-\*------------------------------------*/
-/*------------------------------------*    #MIXINS
-\*------------------------------------*/
-/** CSS Transition
- *	Usage: @include transition(width,0.3s,ease-out);
- */
-/** Rem Unit font sizes with relative fallback http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback  
- *	Usage: @include font-size(1, large);
- */
-/*------------------------------------*    #SCAFFOLDING
-\*------------------------------------*/
-/*------------------------------------*    #SWATCHES
-\*------------------------------------*/
+
 #sg-patterns {
   -webkit-box-sizing: border-box !important;
   box-sizing: border-box !important;
@@ -120,83 +107,26 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
   font-size: 90%;
   line-height: 1; }
   
-  .demo-animate {
-    background: #ddd;
-    padding: 1em;
-    margin-bottom: 1em;
-    text-align: center;
-    border-radius: 8px;
-    cursor: pointer;
-  }
+.demo-animate {
+  background: #ddd;
+  padding: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;}
+  
+/*------------------------------------*
+    #STYLEGUIDE OVERRIDES
+\*------------------------------------*/
 
-/*------------------------------------*    #VARIABLES
-\*------------------------------------*/
-/*------------------------------------*    #COLORS
-\*------------------------------------*/
-/*
- * 1) Color variables involve a two-tier system to keep colors in sync. The
- *    first tier defines the brand and neutral colors, and the second tier
- *    defines the application of those colors.
- */
-/*
- * Brand Colors
- * 1) Brand color variables use English names to define colors to make palettes easier to
- *    identify. Names are generated using this tool: http://chir.ag/projects/name-that-color/
- * 2) Brand color variables should typically not be used directly in Sass partials. Instead, use
- *    second-tier application colors.
- *
- */
-/*
- * Neutral Colors
- * 1) Neutral color variables use a numbered system to define variables for better maintainability.
- *    "$color-gray-10" means "10% gray", which is a gray closer to white than to black. For more info
- *    read https://medium.com/eightshapes-llc/color-in-design-systems-a1c80f65fa3#.brevrq67p
- */
-/**
- * Utility Colors
- * 1) Utility colors are colors used to provide feedback, such as alert messages,
- * form validation, etc.
- */
-/*------------------------------------*    #TEXT COLORS
-\*------------------------------------*/
-/*------------------------------------*    #HEADING COLORS
-\*------------------------------------*/
-/*------------------------------------*    #LINK COLORS
-\*------------------------------------*/
-/*------------------------------------*    #BORDER COLORS
-\*------------------------------------*/
-/*------------------------------------*    #TYPOGRAPHY
-\*------------------------------------*/
-/*------------------------------------*    #LAYOUT
-\*------------------------------------*/
-/**
- * Spacing Defaults
- */
-/*------------------------------------*    #BORDERS
-\*------------------------------------*/
-/**
- * Border Width
- */
-/**
- * Border Radius
- */
-/*------------------------------------*    #ANIMATION
-\*------------------------------------*/
-/**
- * Animation Duration
- */
-/**
- * Animation Easing
- */
-/*------------------------------------*    #BREAKPOINTS
-\*------------------------------------*/
-/**
- * Breakpoints
- */
-/*------------------------------------*    $BASE
-\*------------------------------------*/
-/*------------------------------------*    #BODY
-\*------------------------------------*/
+div h3.sg-pattern-title {
+  font-size: 1.5rem !important;}
+  
+h2 a.patternLink {
+  font-size: 2.25rem !important;
+  font-weight: 700;
+}
+
 /**
  * Body base styles
  */
