@@ -4,7 +4,6 @@
 
 
 
-
 /*------------------------------------*\
     #SWATCHES
 \*------------------------------------*/
@@ -49,4 +48,13 @@
 .s-label {
   font-size: 90%;
   line-height: 1;
+}
+
+.demo-animate {
+  background: #ddd;
+  padding: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
 }

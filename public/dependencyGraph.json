@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": 1514840447924,
+  "timestamp": 1514864713669,
   "graph": {
     "options": {
       "directed": true,
@@ -10,6 +10,30 @@
     "nodes": [
       {
         "v": "00-atoms/00-global/00-brand-colors.mustache",
+        "value": {
+          "compileState": "clean"
+        }
+      },
+      {
+        "v": "00-atoms/00-global/01-grayscale-colors.mustache",
+        "value": {
+          "compileState": "clean"
+        }
+      },
+      {
+        "v": "00-atoms/00-global/02-utility-colors.mustache",
+        "value": {
+          "compileState": "clean"
+        }
+      },
+      {
+        "v": "00-atoms/00-global/03-fonts.mustache",
+        "value": {
+          "compileState": "clean"
+        }
+      },
+      {
+        "v": "00-atoms/00-global/04-animations.mustache",
         "value": {
           "compileState": "clean"
         }

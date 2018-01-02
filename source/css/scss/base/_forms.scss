@@ -36,7 +36,7 @@ button, input, select, textarea {
  */
 input, textarea {
 	width: 100%;
-	border: 1px solid $color-gray-35;
+	border: 1px solid $color-grey-light;
 	border-radius: $border-radius;
 	padding: 1rem;
 }
@@ -54,8 +54,8 @@ input[type=text], input[type=search], input[type=url], input[type=number], texta
  */
 button, input[type="submit"] {
 	padding: $pad-half;
-	background: $color-gray-73;
-	border: 1px solid $color-gray-50;
+	background: $color-grey-dark;
+	border: 1px solid $color-grey;
 	cursor: pointer;
 }
 
