@@ -1,19 +1,22 @@
-# Pattern Lab Node - Angular Example
-
-Answering the question, ["does Pattern Lab “not mix well” with Angular?"](http://stackoverflow.com/questions/39515130/does-pattern-lab-not-mix-well-with-angular)
+# Pattern Lab Node - Using Angular
 
 :fire: :fire: :fire: [Live Demo](http://www.brianmuenzenmeyer.com/patternlab-node-angular-example/public/index.html) :fire: :fire: :fire:
 
-![](https://github.com/bmuenzenmeyer/patternlab-node-angular-example/blob/master/patternlab-angular.gif)
+Demo via: [Brian Muenzen Meyer](https://github.com/bmuenzenmeyer/patternlab-node-angular-example)
 
-Yes this example is a bit contrived and reductive, but it is aimed to demonstrate that the two technologies are not wholesale blanket do-you-speak-to-your-mother-with-that-mouth incompatible.
-
-To View the example:
+To Run the files:
 
 1. Download or Clone
 2. `npm install`
 3. `gulp patternlab:serve`
 
-For best instructions, I suggest you read through the [gulp edition docs](https://github.com/pattern-lab/edition-node-gulp/).
+To Edit with watcher:
 
-This repo is not maintained and is for demo purposes only.
+1. Only edit in the **source** folder `patterns`
+2. Edit or create `mustache` files
+3. Edit markdown files only
+4. `gulp patternlab:watch`
+
+
+For best instructions, read through the [gulp edition docs](https://github.com/pattern-lab/edition-node-gulp/).
+
